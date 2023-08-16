@@ -7,33 +7,32 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
-  public name : string = 'Iron Man';
-  public age: number = 45;
-  public metod: string = 'Tecnologia';
-  
-  get CapName(): string {
+  public name: string = 'ironman';
+  public age:  number = 45;
+
+  get capitalizedName():string {
     return this.name.toUpperCase();
   }
 
-  getHeroDesc(): string {
+  getHeroDescription():string {
     return `${ this.name } - ${ this.age }`;
   }
 
-  ChangeName() {
-    this.name = 'Spider-Man';
+  changeHero():void {
+    this.name = 'Spiderman'
   }
 
-  ChangeAge() {
-    this.age = 28;
+  changeAge():void {
+    this.age = 25;
   }
 
-  restForm() {
-    this.name = 'Iron Man';
-    this.age = 45
+  resetForm():void {
+    this.name = 'ironman';
+    this.age = 45;
 
-    // document.querySelectorAll('h1')!.forEach( elemento => {
-    //   elemento.innerHTML = '<h1> Desde Angular </h1>';
-    // })
+    // document.querySelectorAll('h1')!.forEach( element => {
+    //   element.innerHTML = '<h1>Desde Angular</h1>';
+    // });
   }
 
 }
